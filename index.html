@@ -23,38 +23,13 @@
       -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
     }
 
-    header{border-bottom:1px solid var(--border); background:#fff}
-    .row{
-      max-width:var(--content-max);
-      margin:0 auto;
-      padding:10px 5px;
-      display:flex; align-items:center; justify-content:space-between;
-    }
-    .logo-wrap{display:flex; align-items:center; gap:10px}
-    .logo{height:26px; width:auto}
-    .menu-btn{background:none;border:0;cursor:pointer;padding:8px;color:var(--wm-blue)}
-    .menu-ico{width:22px;height:22px}
-
-    .overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:.2s;z-index:999}
-    .overlay.active{opacity:1;pointer-events:auto}
-    .drawer{
-      position:fixed;top:0;right:-300px;width:260px;height:100vh;background:#fff;
-      box-shadow:-2px 0 12px rgba(0,0,0,.12);
-      padding:20px;transition:right .25s ease;z-index:1000;
-    }
-    .drawer.active{right:0}
-    .drawer .btn{width:100%;background:var(--wm-blue);color:#fff;border:0;border-radius:10px;padding:12px 14px;font-weight:700;cursor:pointer}
-
     .section{width:100%}
     .container{max-width:var(--content-max);margin:0 auto;padding:20px 40px}
     .hero{text-align:center}
 
-    /* tighten space under image */
     .gift{
       width:90%;max-width:340px;margin:0 auto 6px;display:block;border-radius:5px;
     }
-
-    /* pull title + steps block up slightly and fix font-size */
     h1.title{
       color:var(--wm-blue);font-weight:800;line-height:1.25;font-size:22px;max-width:34ch;
       margin:4px auto 18px;
@@ -63,7 +38,7 @@
     .steps{list-style:none;max-width:420px;margin:0 auto;text-align:left}
     .steps li{display:flex;gap:10px;margin:6px 0;font-size:14.5px;line-height:1.35}
     .steps .n{color:var(--wm-blue);font-weight:700;min-width:16px;text-align:right}
-    .steps li:last-child{margin-bottom:16px;} /* extra space under last step */
+    .steps li:last-child{margin-bottom:16px;}
 
     .cta-wrap{text-align:center}
     .cta{
@@ -74,47 +49,33 @@
     }
     .cta:hover{background:var(--wm-blue-dark)}
 
-    footer{border-top:1px solid var(--border);background:#fff}
-    footer .container{padding:12px 16px;color:#94a3b8;font-size:12px;text-align:center}
+    /* Divider */
+    hr.divider {
+      border: 0;
+      height: 4px;
+      background: #000;
+      border-radius: 2px;
+      margin: 30px auto;
+      width: 80%;
+    }
 
-    #faqPage{display:none}
-    #faqPage.active{display:block}
+    footer{border-top:1px solid var(--border);background:#fff}
+    footer .container{padding:12px 40px;color:#94a3b8;font-size:12px;text-align:center}
+
     .faq-title{color:var(--wm-blue);text-align:center;font-size:20px;font-weight:800;margin-bottom:12px}
     .faq-list{max-width:800px;margin:0 auto}
     .faq-item{margin:12px 0;font-size:14.5px;line-height:1.45}
     .faq-item .q{font-weight:800;margin-bottom:4px}
-    .back-btn{
-      display:inline-block;margin:14px auto 0;background:var(--wm-blue);color:#fff;border:0;
-      padding:10px 20px;border-radius:10px;font-weight:800;cursor:pointer
-    }
 
     @media (min-width:180px){ h1.title{font-size:20px} }
   </style>
 </head>
 <body>
 
-  <div id="overlay" class="overlay" onclick="closeMenu()"></div>
-  <nav id="drawer" class="drawer">
-    <button class="btn" onclick="openFAQ()">FAQ</button>
-  </nav>
-
-  <header>
-    <div class="row">
-      <div class="logo-wrap">
-        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Walmart_logo_%282008%29.svg/512px-Walmart_logo_%282008%29.svg.png" alt="Walmart">
-      </div>
-      <button class="menu-btn" aria-label="Open menu" onclick="toggleMenu()">
-        <svg class="menu-ico" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-    </div>
-  </header>
-
   <div id="mainPage">
     <section class="section">
       <div class="container hero">
-        <img class="gift" alt="Walmart Gift Card"
+        <img class="gift" alt="Best Buy Gift Card"
              src="https://www.pngmart.com/files/15/Blue-Best-Buy-Logo-PNG.png" />
         <h1 class="title">Follow the steps below to receive your $500 Best Buy gift card</h1>
 
@@ -122,22 +83,20 @@
           <li><span class="n">1.</span><span>Click <strong>"Sign Up!"</strong> Below</span></li>
           <li><span class="n">2.</span><span>Enter Your <strong>Email &amp; Basic Info</strong></span></li>
           <li><span class="n">3.</span><span><strong>Answer</strong> a Short Product Survey</span></li>
-          <li><span class="n">4.</span><span>Complete 3 - 5 <strong>Recommended</strong> Offers</span></li>
+          <li><span class="n">4.</span><span>Complete 3 - 4 <strong>Recommended</strong> Offers</span></li>
           <li><span class="n">5.</span><span>Claim Your <strong>$500 Best Buy Gift Card!</strong></span></li>
         </ol>
 
         <div class="cta-wrap">
-          <a class="cta" href="https://glstrk.com/?offer_ids=NzM5LDk1OQ%3D%3D&affiliate_id=MjYwOQ%3D%3D" target="_blank" rel="noopener noreferrer">Sign Up!</a>
+          <a class="cta" href="https://www.google.com" target="_blank" rel="noopener noreferrer">Sign Up!</a>
         </div>
       </div>
     </section>
 
-    <footer>
-      <div class="container">© 2025 LockerRewards — Best Buy. All rights reserved</div>
-    </footer>
-  </div>
+    <!-- Divider before FAQ -->
+    <hr class="divider">
 
-  <div id="faqPage">
+    <!-- FAQ inline -->
     <section class="section">
       <div class="container">
         <h2 class="faq-title">Frequently Asked Questions</h2>
@@ -155,43 +114,13 @@
             <div>A: You can do as many deals as you want; when you complete them you receive your reward.</div>
           </div>
         </div>
-        <div style="text-align:center">
-          <button class="back-btn" onclick="showMain()">← Go Back</button>
-        </div>
       </div>
     </section>
+
     <footer>
       <div class="container">© 2025 LockerRewards — Best Buy. All rights reserved</div>
     </footer>
   </div>
 
-  <script>
-    const overlay = document.getElementById('overlay');
-    const drawer  = document.getElementById('drawer');
-    const main    = document.getElementById('mainPage');
-    const faq     = document.getElementById('faqPage');
-
-    function toggleMenu(){
-      drawer.classList.toggle('active');
-      overlay.classList.toggle('active');
-      document.body.style.overflow = drawer.classList.contains('active') ? 'hidden' : '';
-    }
-    function closeMenu(){
-      drawer.classList.remove('active');
-      overlay.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-    function openFAQ(){
-      main.style.display = 'none';
-      faq.classList.add('active');
-      closeMenu(); window.scrollTo({top:0, behavior:'instant'});
-    }
-    function showMain(){
-      faq.classList.remove('active');
-      main.style.display = 'block';
-      window.scrollTo({top:0, behavior:'instant'});
-    }
-    document.addEventListener('keydown', e => { if(e.key==='Escape') closeMenu(); });
-  </script>
 </body>
 </html>
