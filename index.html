@@ -1,989 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Get $1000 Instantly</title>
-    
-    <!--Optional, send client hints to get accurate device data-->
-    <meta http-equiv="delegate-ch" content="sec-ch-ua https://cycsrd.mcgo2.com; sec-ch-ua-mobile https://cycsrd.mcgo2.com; sec-ch-ua-arch https://cycsrd.mcgo2.com; sec-ch-ua-model https://cycsrd.mcgo2.com; sec-ch-ua-platform https://cycsrd.mcgo2.com; sec-ch-ua-platform-version https://cycsrd.mcgo2.com; sec-ch-ua-bitness https://cycsrd.mcgo2.com; sec-ch-ua-full-version-list https://cycsrd.mcgo2.com; sec-ch-ua-full-version https://cycsrd.mcgo2.com" />
-
-    <!-- MaxConv Tracking Script Base Code-->
-    <script>!function(w,d,o,n,c){w[o]=w[o]||function(){(w[o].q=w[o].q||[]).push(arguments)};var s=d.createElement(n),t=d.getElementsByTagName(n)[0];s.async=!0;s.defer=!0;s.src="//cycsrd.mcgo2.com/t/t.js";t.parentNode.insertBefore(s,t);}(window,document,"maxconv","script");</script>
-    <noscript><link rel="stylesheet" href="//cycsrd.mcgo2.com/t/t.css?mc_ns=1" /></noscript>
-    <!-- End MaxConv Tracking Script Base Code-->
-    
-    <!-- TikTok Pixel Code -->
-    <script>
-    !function (w, d, t) {
-        w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["track","page","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
-        ttq.load('D39E4LRC77UFKOQ7L2L0');
-        ttq.page();
-    }(window, document, 'ttq');
-    </script>
-    <!-- TikTok Pixel Code End -->
-    
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init','2324406347952889');
-    fbq('track','PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-         src="https://www.facebook.com/tr?id=2324406347952889&ev=PageView&noscript=1" />
-    </noscript>
-    <!-- Meta Pixel Code End -->
-    
-    <!-- TikTok Event Tracking -->
-    <script>
-    // Track ViewContent event when page loads
-    ttq.track('ViewContent', {
-        "contents": [
-            {
-                "content_id": "apple_pay_landing_page",
-                "content_name": "Apple Pay Reward Landing Page",
-                "content_category": "Mobile App",
-                "content_type": "Landing Page"
-            }
-        ]
-    });
-    
-    // Track button clicks
-    function trackButtonClick(eventName) {
-        ttq.track(eventName, {
-            "contents": [
-                {
-                    "content_id": "apple_pay_landing_page",
-                    "content_name": "Apple Pay Reward Landing Page",
-                    "content_category": "Mobile App",
-                    "content_type": "Landing Page"
-                }
-            ]
-        });
-    }
-    </script>
-    <!-- TikTok Event Tracking End -->
-
-    <!-- Enhanced MaxConv Integration -->
-    <script>
-    // Enhanced MaxConv tracking with dynamic parameters
-    function setupEnhancedMaxConvTracking() {
-        // Wait for MaxConv to load
-        if (typeof maxconv === 'undefined') {
-            setTimeout(setupEnhancedMaxConvTracking, 100);
-            return;
-        }
-
-        maxconv(function() {
-            // Get router parameters from session storage
-            const routerParams = JSON.parse(sessionStorage.getItem('routerParams') || '{}');
-            const visitorData = JSON.parse(sessionStorage.getItem('visitorData') || '{}');
-            
-            // Get current URL parameters
-            const urlParams = new URLSearchParams(window.location.search);
-            const currentParams = {};
-            for (const [key, value] of urlParams) {
-                currentParams[key] = value;
-            }
-            
-            // Merge all parameters
-            const allParams = { ...routerParams, ...currentParams };
-            
-            // Get visitor data from MaxConv
-            const maxconvData = maxconv('getFeatureData');
-            const tokens = maxconv('getTokens');
-            
-            // Log enhanced page view
-            maxconv('logEventGoal', 'lander_view', JSON.stringify({
-                lander: 'apple_pay_1000',
-                source: allParams.source || 'direct',
-                campaign: allParams.campaign || 'default',
-                geo: allParams.geo || maxconvData.country,
-                age: allParams.age || 'unknown',
-                referrer: allParams.referrer || document.referrer,
-                test: allParams.test || '0',
-                visitor_country: maxconvData.country,
-                visitor_ip: maxconvData.ip,
-                timestamp: Date.now()
-            }));
-            
-            // Store enhanced data for button clicks
-            window.enhancedTrackingData = {
-                allParams,
-                maxconvData,
-                tokens,
-                visitorData
-            };
-            
-            console.log('Enhanced MaxConv Tracking Setup Complete:', {
-                allParams,
-                maxconvData,
-                tokens
-            });
-        });
+  <meta charset="UTF-8" />
+  <title>Foot Locker Product Tester</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
     }
 
-    // Enhanced button click tracking
-    function trackEnhancedButtonClick(eventName) {
-        // TikTok tracking
-        ttq.track(eventName, {
-            "contents": [
-                {
-                    "content_id": "apple_pay_landing_page",
-                    "content_name": "Apple Pay Reward Landing Page",
-                    "content_category": "Mobile App",
-                    "content_type": "Landing Page"
-                }
-            ]
-        });
-        
-        // Facebook tracking
-        fbq('track', 'Lead');
-        
-        // Enhanced MaxConv tracking
-        if (typeof maxconv !== 'undefined' && window.enhancedTrackingData) {
-            maxconv(function() {
-                maxconv('logEventGoal', 'button_click', JSON.stringify({
-                    event: eventName,
-                    lander: 'apple_pay_1000',
-                    ...window.enhancedTrackingData.allParams,
-                    timestamp: Date.now()
-                }));
-                
-                // Log conversion with enhanced data
-                maxconv('logConversion', {
-                    payout: 1000,
-                    event: 'lead',
-                    ...window.enhancedTrackingData.allParams
-                });
-            });
-        }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      color: #000;
+      margin: 0px;
+      padding: 0;
     }
 
-    // Dynamic offer link generation
-    function generateDynamicOfferLink() {
-        if (typeof maxconv !== 'undefined' && window.enhancedTrackingData) {
-            maxconv(function() {
-                // Generate dynamic offer link based on parameters
-                const offerLink = maxconv('getOfferLink');
-                
-                // Add custom parameters to the offer link
-                const url = new URL(offerLink);
-                Object.keys(window.enhancedTrackingData.allParams).forEach(key => {
-                    if (window.enhancedTrackingData.allParams[key]) {
-                        url.searchParams.set(key, window.enhancedTrackingData.allParams[key]);
-                    }
-                });
-                
-                // Update all CTA buttons with the enhanced link
-                const ctaButtons = document.querySelectorAll('.claim-button, .cta-form-button');
-                ctaButtons.forEach(button => {
-                    if (button.tagName === 'A') {
-                        button.href = url.toString();
-                    } else if (button.tagName === 'BUTTON') {
-                        button.onclick = function() {
-                            trackEnhancedButtonClick('ClickButton');
-                            window.location.href = url.toString();
-                            return false;
-                        };
-                    }
-                });
-                
-                console.log('Dynamic offer link generated:', url.toString());
-            });
-        }
+    .header {
+      background: #fff;
+      margin: 0;
+      padding: 10px 0px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
     }
 
-    // Initialize enhanced tracking
-    document.addEventListener('DOMContentLoaded', function() {
-        setupEnhancedMaxConvTracking();
-        
-        // Generate dynamic links after MaxConv loads
-        setTimeout(generateDynamicOfferLink, 500);
-    });
-    </script>
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            -webkit-tap-highlight-color: transparent;
-            -webkit-user-select: none;
-            user-select: none;
-        }
+    .logo {
+      max-width: 50px; 
+      height: auto;
+      padding: 0px;
+      margin-bottom: 6px;
+      margin-left: 15px;
+    }
 
-        body {
-            background: #f7f8fa;
-            min-height: 100vh;
-            position: relative;
-            overflow-x: hidden;
-            color: #2f3033;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
+    #menu-toggle {
+      display: none;
+    }
 
-        /* Particle background */
-        #particles-js {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1;
-        }
+    .menu-icon {
+      cursor: pointer;
+      width: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 20px;
+      margin-right: 18px;
+    }
 
-        /* Main card with floating animation */
-        .reward-card {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 24px;
-            padding: 1.5rem 1.2rem;
-            position: relative;
-            z-index: 2;
-            backdrop-filter: blur(10px);
-            border: 1px solid #007aff33;
-            max-width: 420px;
-            width: 100%;
-            box-shadow: 0 10px 30px #007aff1a, 0 1px 8px #007aff33;
-            animation: cardFloat 3s ease-in-out infinite;
-        }
+    .menu-icon span {
+      display: block;
+      height: 3px;
+      background: #ed8235;
+      border-radius: 2px;
+    }
 
-        @keyframes cardFloat {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
+    .menu {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 15px;
+      background: #000;
+      color: #fff;
+      padding: 10px 30px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
 
-        /* App logo section */
-        .app-logo-container {
-            text-align: center;
-            margin-bottom: 1rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #007aff1a;
-        }
+    #menu-toggle:checked + .menu-icon + .menu {
+      display: block;
+    }
 
-        .app-logo {
-            width: 120px;
-            height: 120px;
-            filter: drop-shadow(0 4px 12px #007aff4d);
-            animation: logoShine 3s infinite;
-            display: block;
-            margin: 0 auto;
-            border-radius: 24px;
-        }
+    .menu label {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
 
-        @keyframes logoShine {
-            0% { filter: drop-shadow(0 4px 12px #007aff4d); }
-            50% { filter: drop-shadow(0 8px 20px #007aff80); }
-            100% { filter: drop-shadow(0 4px 12px #007aff4d); }
-        }
+    .main-content {
+      padding: 30px 0 40px;
+      text-align: center;
+    }
 
-        .app-title {
-            font-size: 2rem;
-            font-weight: 800;
-            margin-top: 0.8rem;
-            color: #007aff;
-            text-shadow: 0 4px 20px #007aff4d;
-        }
+    .content-wrapper {
+      max-width: 340px;
+      margin: 0 auto;
+    }
 
-        /* Money amount section */
-        .amount {
-            font-size: 2.5rem;
-            font-weight: 700;
-            text-align: center;
-            color: #007aff;
-            margin: 0.5rem 0;
-            text-shadow: 0 4px 20px #007aff4d;
-            animation: amountPulse 2s infinite;
-        }
+    .image-container {
+      display: flex;
+      justify-content: center;
+      margin: 15px auto 30px;
+    }
 
-        @keyframes amountPulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
+    .image-container img {
+      width: 100%;
+      max-width: 208px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
 
-        .amount-subtext {
-            text-align: center;
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: #040404;
-            text-shadow: 0 2px 10px #007aff4d;
-        }
+    .main-heading {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
 
-        /* Instructions container */
-        .instructions-container {
-            margin: 1.2rem auto;
-            padding: 1rem;
-            background: #007aff0d;
-            border-radius: 16px;
-            border: 1px solid #007aff1a;
-        }
+    .cta-button {
+      display: inline-block;
+      background: #ed8235;
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 18px;
+      margin-top: 30px;
+      animation: glowPulse 8s infinite ease-in-out;
+      transition: box-shadow 0.3s ease-in-out;
+    }
 
-        .instruction-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 10px 0;
-            font-size: 1rem;
-            color: #2f3033;
-            font-weight: 600;
-        }
+    @keyframes glowPulse {
+      0%, 90%, 100% {
+        box-shadow: 0 0 0px #e01a22;
+      }
+      94% {
+        box-shadow: 0 0 15px 6px rgba(224, 26, 34, 0.5);
+      }
+      97% {
+        box-shadow: 0 0 10px 4px rgba(224, 26, 34, 0.3);
+      }
+    }
 
-        .number {
-            background: #007aff;
-            color: white;
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.9rem;
-            font-weight: 700;
-            box-shadow: 0 2px 8px rgba(0, 122, 255, 0.2);
-            flex-shrink: 0;
-        }
+    .footer {
+      color: #777;
+      font-size: 14px;
+      margin-top: 40px;
+    }
 
-        /* CTA Button */
-        .claim-button {
-            background: #007aff;
-            color: white;
-            border: none;
-            padding: 1.1rem;
-            border-radius: 50px;
-            font-weight: 800;
-            font-size: 1.2rem;
-            width: 100%;
-            cursor: pointer;
-            margin: 1.2rem auto 0.8rem;
-            display: block;
-            box-shadow: 0 10px 30px #007aff4d, 0 5px 15px #007aff33;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            text-align: center;
-        }
+    #show-faq {
+      display: none;
+    }
 
-        .claim-button:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px #007aff66, 0 8px 20px #007aff4d;
-        }
+    .faq-section {
+      display: none;
+      padding: 30px 0;
+      max-width: 600px;
+      margin: 0 auto;
+    }
 
-        .claim-button:active {
-            transform: translateY(-2px);
-        }
+    #show-faq:checked ~ .main-content {
+      display: none;
+    }
 
-        /* Form fallback CTA for TikTok WebView reliability */
-        .cta-form {
-            display: none;
-            width: 100%;
-            margin: 1.2rem auto 0.8rem;
-        }
+    #show-faq:checked ~ .faq-section {
+      display: block;
+    }
 
-        .cta-form-button {
-            background: #007aff;
-            color: white;
-            border: none;
-            padding: 1.1rem;
-            border-radius: 50px;
-            font-weight: 800;
-            font-size: 1.2rem;
-            width: 100%;
-            cursor: pointer;
-            display: block;
-            box-shadow: 0 10px 30px #007aff4d, 0 5px 15px #007aff33;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            text-align: center;
-        }
+    .faq-section h2 {
+      color: #000;
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-        .cta-form-button:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px #007aff66, 0 8px 20px #007aff4d;
-        }
+    .faq-section p {
+      margin-top: 20px;
+    }
 
-        .cta-form-button:active {
-            transform: translateY(-2px);
-        }
+    .back-button {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+    }
 
+    .back-button label {
+      background: #000;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
 
-        /* Notification styles */
-        .notification {
-            position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%) translateY(-100%);
-            background: rgba(255, 255, 255, 0.95);
-            padding: 15px 20px;
-            border-radius: 12px;
-            box-shadow: 0 8px 32px #007aff33;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 14px;
-            color: #2f3033;
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-            border: 1px solid #007aff33;
-            transition: transform 0.3s ease;
-            max-width: 320px;
-            width: calc(100% - 2rem);
-        }
+    @media (max-width: 480px) {
+      .logo {
+        max-width: 50%;
+      }
 
-        .notification.show {
-            transform: translateX(-50%) translateY(0);
-        }
+      .menu-icon {
+        width: 24px;
+        height: 18px;
+      }
 
-        .notification-icon {
-            width: 30px;
-            height: 30px;
-            background: #007aff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 14px;
-            flex-shrink: 0;
-        }
+      .menu-icon span {
+        height: 2px;
+      }
 
-        .notification-content {
-            flex: 1;
-        }
-
-        .notification-title {
-            font-weight: 600;
-            margin-bottom: 2px;
-            color: #2f3033;
-        }
-
-        .notification-text {
-            color: #666;
-            font-size: 13px;
-        }
-
-        /* Mobile optimizations */
-        @media (max-width: 380px) {
-            .reward-card {
-                padding: 1.2rem 1rem;
-            }
-            
-            .app-logo {
-                width: 100px;
-                height: 100px;
-            }
-            
-            .app-title {
-                font-size: 1.8rem;
-            }
-            
-            .amount {
-                font-size: 2.2rem;
-            }
-            
-            .amount-subtext {
-                font-size: 1.1rem;
-            }
-            
-            .instruction-item {
-                font-size: 0.95rem;
-            }
-            
-            .claim-button {
-                font-size: 1.1rem;
-                padding: 1rem;
-            }
-        }
-
-        /* TikTok WebView specific optimizations */
-        @media screen and (max-width: 480px) {
-            input, textarea, select {
-                font-size: 16px !important;
-            }
-        }
-
-        /* Prevent zoom on input focus for TikTok WebView */
-        .cta-form-button {
-            -webkit-tap-highlight-color: rgba(0, 122, 255, 0.3);
-            -webkit-touch-callout: none;
-            -webkit-user-select: none;
-            user-select: none;
-            -webkit-appearance: none;
-            appearance: none;
-            min-height: 44px;
-        }
-
-        /* Instagram Testimonials */
-        .instagram-testimonials {
-            margin-top: 16px;
-            margin-bottom: 16px;
-        }
-
-        .testimonials-header {
-            text-align: center;
-            font-size: 14px;
-            font-weight: 600;
-            color: #2f3033;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-        }
-
-        .instagram-icon {
-            width: 16px;
-            height: 16px;
-            background: linear-gradient(45deg, #007aff 0%, #0056b3 100%);
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .testimonial-card {
-            background: rgba(255, 255, 255, 0.95);
-            border: 1px solid #eee;
-            border-radius: 16px;
-            padding: 12px;
-            margin-bottom: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
-        }
-
-        .testimonial-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 8px;
-        }
-
-        .testimonial-avatar {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            margin-right: 10px;
-            object-fit: cover;
-            border: 2px solid #fff;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-
-        .testimonial-info {
-            flex: 1;
-        }
-
-        .testimonial-username {
-            font-size: 13px;
-            font-weight: 600;
-            color: #2f3033;
-            margin-bottom: 1px;
-        }
-
-        .testimonial-time {
-            font-size: 11px;
-            color: #666;
-        }
-
-        .testimonial-text {
-            font-size: 13px;
-            line-height: 1.4;
-            color: #2f3033;
-            margin-bottom: 6px;
-        }
-
-        .testimonial-amount {
-            font-weight: 700;
-            color: #007aff;
-        }
-
-        .testimonial-engagement {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 11px;
-            color: #666;
-        }
-
-        .engagement-item {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-    </style>
+      .menu {
+        right: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Particle background canvas -->
-    <canvas id="particles-js"></canvas>
 
-    <!-- Main container -->
-    <div class="reward-card">
-        <div class="app-logo-container">
-            <img src="applesquare.png" 
-                 alt="Apple Pay" 
-                 class="app-logo">
-            <div class="app-title">Apple Pay</div>
-        </div>
+  <input type="checkbox" id="show-faq" />
 
-        <div class="amount"><span id="currency-symbol">$</span><span id="counter">0.00</span></div>
-        <div class="amount-subtext">Instantly sent to you</div>
+  <div class="header">
+    <img class="logo" src="" alt="" style="max-width: 159px; height: auto;" />
 
-        <div class="instructions-container">
-            <div class="instruction-item">
-                <span class="number">1</span>
-                <span>Complete 3-5 required deals</span>
-            </div>
-            <div class="instruction-item">
-                <span class="number">2</span>
-                <span>Provide a valid email address</span>
-            </div>
-            <div class="instruction-item">
-                <span class="number">3</span>
-                <span>Ensure you're 18 years or older</span>
-            </div>
-            <div class="instruction-item">
-                <span class="number">4</span>
-                <span>Limited Space: Only 239 spots remaining!</span>
-            </div>
-        </div>
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-icon" for="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
 
-        <a href="https://cycsrd.mcgo2.com/click" class="claim-button" onclick="trackEnhancedButtonClick('ClickButton');">
-            Activate $1000 Reward →
-        </a>
+    <div class="menu">
+      <label for="show-faq">FAQ</label>
+    </div>
+  </div>
 
-        <!-- Form fallback CTA for TikTok WebView reliability -->
-        <form action="https://cycsrd.mcgo2.com/click" method="get" class="cta-form" id="fallback-cta">
-            <input type="hidden" name="cb" value="APPLE">
-            <input type="hidden" name="t" value="" id="timestamp">
-            <button type="submit" class="cta-form-button" onclick="trackEnhancedButtonClick('ClickButton');">
-                Activate $1000 Reward →
-            </button>
-        </form>
+  <div class="main-content">
+    <div class="content-wrapper">
+      <div class="image-container">
+        <img src="https://www.logo.wine/a/logo/Apple_Pay/Apple_Pay-White-Dark-Background-Logo.wine.svg" alt="Product Image" style="max-width: 300px; height: auto;" />
+      </div>
 
-        <!-- Instagram Testimonials -->
-        <div class="instagram-testimonials">
-            <div class="testimonials-header">
-                <div class="instagram-icon">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                    </svg>
-                </div>
-                Recent Success Stories
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-header">
-                    <img src="https://img.funnelish.com/69400/818190/1751222976-Random%20User%20Photo%20%281%29.jpg" alt="Profile" class="testimonial-avatar">
-                    <div class="testimonial-info">
-                        <div class="testimonial-username">@sarah_achiever</div>
-                        <div class="testimonial-time">2h ago</div>
-                    </div>
-                </div>
-                <div class="testimonial-text">
-                    Started yesterday and already earned <span class="testimonial-amount">$438</span> with Apple Pay rewards! The process is so simple ✨
-                </div>
-                <div class="testimonial-engagement">
-                    <div class="engagement-item">
-                        <span>❤️</span>
-                        <span>89</span>
-                    </div>
-                    <div class="engagement-item">
-                        <span>💬</span>
-                        <span>23</span>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-header">
-                    <img src="https://img.funnelish.com/69400/818190/1751222979-Random%20User%20Photo%2082.jpg" alt="Profile" class="testimonial-avatar">
-                    <div class="testimonial-info">
-                        <div class="testimonial-username">@emma_davis</div>
-                        <div class="testimonial-time">5h ago</div>
-                    </div>
-                </div>
-                <div class="testimonial-text">
-                    Week 3 update: <span class="testimonial-amount">$1,372 total earned</span> sent straight to my Apple Pay 🎉
-                </div>
-                <div class="testimonial-engagement">
-                    <div class="engagement-item">
-                        <span>❤️</span>
-                        <span>156</span>
-                    </div>
-                    <div class="engagement-item">
-                        <span>💬</span>
-                        <span>34</span>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-header">
-                    <img src="https://img.funnelish.com/69400/818190/1751222981-Random%20User%20Photo.jpg" alt="Profile" class="testimonial-avatar">
-                    <div class="testimonial-info">
-                        <div class="testimonial-username">@mikejohnson_22</div>
-                        <div class="testimonial-time">1d ago</div>
-                    </div>
-                </div>
-                <div class="testimonial-text">
-                    Just completed my 4th deal today! <span class="testimonial-amount">Made $683 this week</span> and got paid via Apple Pay 💰 This actually works guys! 🔥
-                </div>
-                <div class="testimonial-engagement">
-                    <div class="engagement-item">
-                        <span>❤️</span>
-                        <span>47</span>
-                    </div>
-                    <div class="engagement-item">
-                        <span>💬</span>
-                        <span>12</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <h3 class="main-heading"><strong>Get $1000 Instantly From Apple</strong></h3>
+
+      <p><span style="color: #ed8235;">1.</span> Click <strong>"Sign Up!"</strong> Below</p>
+      <p><span style="color: #ed8235;">2.</span> Enter Your <strong>Email & Basic Info</strong></p>
+      <p><span style="color: #ed8235;">3.</span> <strong>Answer</strong> a Short Product Survey</p>
+      <p><span style="color: #ed8235;">4.</span> Complete 3 - 5 <strong>Recommended</strong> Offers</p>
+
+      <a class="cta-button" href="https://uplevelrewarded.com/aff_c?offer_id=1701&aff_id=2609">Sign Up!</a>
     </div>
 
-    <script>
-        // Counter animation
-        function animateValue(element, start, end, duration) {
-            let startTimestamp = null;
-            const step = (timestamp) => {
-                if (!startTimestamp) startTimestamp = timestamp;
-                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                const currentValue = progress * (end - start) + start;
-                element.textContent = currentValue.toFixed(2);
-                if (progress < 1) {
-                    window.requestAnimationFrame(step);
-                }
-            };
-            window.requestAnimationFrame(step);
-        }
+    <p class="footer">&copy; 2025 LockerRewards - Apple. All rights reserved</p>
+  </div>
 
-        // Currency detection and counter animation
-        function detectCurrency() {
-            const currencySymbol = document.getElementById('currency-symbol');
-            const counterElement = document.getElementById('counter');
-            
-            // Set to dollar symbol globally for USA
-            currencySymbol.textContent = '$';
-            animateValue(counterElement, 0, 1000, 2000);
-        }
+  <div class="faq-section">
+    <h2><strong>Frequently Asked Questions</strong></h2>
 
-        // Start currency detection and counter animation on load
-        window.addEventListener('load', function() {
-            detectCurrency();
-        });
+    <p><strong>Q: How long do the deals take?</strong><br />
+    A: Each deal takes around 10–20 minutes to complete.</p>
 
-        // Notification names - more diverse and realistic
-        const NAMES = [
-            'Jayden K.', 'Aaliyah M.', 'Carlos R.', 'Destiny W.', 'Malik J.',
-            'Kiara T.', 'Ethan Z.', 'Jasmine L.', 'Diego S.', 'Trinity B.',
-            'Aiden P.', 'Camila V.', 'Jordan C.', 'Ariana G.', 'Mason D.',
-            'Zoe H.', 'Isaiah N.', 'Gabriella F.', 'Liam O.', 'Sophia Y.',
-            'DeAndre W.', 'Fatima A.', 'Kai L.', 'Luna R.', 'Javier M.',
-            'Amara K.', 'Tyrese B.', 'Valentina C.', 'Ryder T.', 'Naomi S.',
-            'Dante P.', 'Aliyah J.', 'Mateo G.', 'Khloe D.', 'Jamal H.',
-            'Zara N.', 'Phoenix R.', 'Layla M.', 'Nico V.', 'Amelia K.',
-            'Darius L.', 'Sienna W.', 'Ezra B.', 'Maya T.', 'Kingston J.',
-            'Nyla F.', 'Roman S.', 'Eliana C.', 'Kayden M.', 'Aubrey P.'
-        ];
+    <p><strong>Q: What are deals?</strong><br />
+    A: Deals are when you download an app, complete a survey or sign up for a trial subscription on the link above and get to a certain reward level in the app, each deal has a requirement.</p>
 
-        // Most popular US states
-        const STATES = [
-            'CA', 'TX', 'FL', 'NY', 'PA', 'IL', 'OH', 'GA', 'NC', 'MI',
-            'NJ', 'VA', 'WA', 'AZ', 'MA', 'TN', 'IN', 'MD', 'MO', 'WI',
-            'CO', 'MN', 'SC', 'AL', 'LA', 'KY', 'OR', 'OK', 'CT', 'NV'
-        ];
+    <p><strong>Q: How many deals do I have to do?</strong><br />
+    A: You can do as many deals as you want, upon completion of the deals you will receive your reward.</p>
 
-        // Create notification function
-        function createNotification() {
-            const notification = document.createElement('div');
-            notification.className = 'notification';
-            
-            // Get random name and state
-            const randomName = NAMES[Math.floor(Math.random() * NAMES.length)];
-            const randomState = STATES[Math.floor(Math.random() * STATES.length)];
-            
-            // Get current currency symbol
-            const currencySymbol = document.getElementById('currency-symbol').textContent;
-            
-            // Generate random amount between 750 and 1000
-            const randomAmount = (Math.random() * 250 + 750).toFixed(2);
-            
-            notification.innerHTML = `
-                <div class="notification-icon">
-                    <img src="applesquare.png" 
-                         alt="Apple Pay" 
-                         style="width: 24px; height: 24px; border-radius: 50%; object-fit: cover;">
-                </div>
-                <div class="notification-content">
-                    <div class="notification-title">Recent Claim</div>
-                    <div class="notification-text">${randomName} from ${randomState} claimed ${currencySymbol}${randomAmount}!</div>
-                </div>
-            `;
-            
-            document.body.appendChild(notification);
-            
-            // Show notification
-            setTimeout(() => {
-                notification.classList.add('show');
-            }, 100);
-            
-            // Hide and remove notification
-            setTimeout(() => {
-                notification.classList.remove('show');
-                setTimeout(() => {
-                    notification.remove();
-                }, 300);
-            }, 5000);
-        }
+    <div class="back-button">
+      <label for="show-faq">← Go Back</label>
+    </div>
+  </div>
 
-        // Start notifications
-        setTimeout(() => {
-            createNotification();
-            setInterval(() => {
-                createNotification();
-            }, Math.random() * 4000 + 8000);
-        }, 3000);
-
-        // Geometric particles animation
-        (function() {
-            const canvas = document.getElementById('particles-js');
-            const ctx = canvas.getContext('2d');
-            const particles = [];
-            const particleCount = 30;
-            const maxDistance = 150;
-            const mousePos = { x: null, y: null };
-            
-            // Set canvas size
-            function setCanvasSize() {
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
-            }
-            setCanvasSize();
-            window.addEventListener('resize', setCanvasSize);
-            
-            // Track mouse position
-            window.addEventListener('mousemove', (e) => {
-                mousePos.x = e.clientX;
-                mousePos.y = e.clientY;
-            });
-            
-            // Particle class
-            class Particle {
-                constructor() {
-                    this.x = Math.random() * canvas.width;
-                    this.y = Math.random() * canvas.height;
-                    this.vx = (Math.random() - 0.5) * 0.8;
-                    this.vy = (Math.random() - 0.5) * 0.8;
-                    this.radius = 3;
-                }
-                
-                update() {
-                    this.x += this.vx;
-                    this.y += this.vy;
-                    
-                    // Bounce off walls
-                    if (this.x < 0 || this.x > canvas.width) this.vx = -this.vx;
-                    if (this.y < 0 || this.y > canvas.height) this.vy = -this.vy;
-                    
-                    // Mouse repulsion
-                    if (mousePos.x !== null && mousePos.y !== null) {
-                        const dx = this.x - mousePos.x;
-                        const dy = this.y - mousePos.y;
-                        const distance = Math.sqrt(dx * dx + dy * dy);
-                        
-                        if (distance < 100) {
-                            const force = (100 - distance) / 100;
-                            this.x += dx * force * 0.02;
-                            this.y += dy * force * 0.02;
-                        }
-                    }
-                }
-                
-                draw() {
-                    ctx.beginPath();
-                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                    ctx.fillStyle = '#007aff';
-                    ctx.fill();
-                }
-            }
-            
-            // Create particles
-            for (let i = 0; i < particleCount; i++) {
-                particles.push(new Particle());
-            }
-            
-            // Animation loop
-            function animate() {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                
-                // Update and draw particles
-                particles.forEach((particle, i) => {
-                    particle.update();
-                    particle.draw();
-                    
-                    // Draw connections
-                    particles.slice(i + 1).forEach(otherParticle => {
-                        const dx = particle.x - otherParticle.x;
-                        const dy = particle.y - otherParticle.y;
-                        const distance = Math.sqrt(dx * dx + dy * dy);
-                        
-                        if (distance < maxDistance) {
-                            ctx.beginPath();
-                            ctx.moveTo(particle.x, particle.y);
-                            ctx.lineTo(otherParticle.x, otherParticle.y);
-                            const opacity = (1 - distance / maxDistance) * 0.4;
-                            ctx.strokeStyle = `rgba(0, 122, 255, ${opacity})`;
-                            ctx.lineWidth = 1;
-                            ctx.stroke();
-                        }
-                    });
-                });
-                
-                requestAnimationFrame(animate);
-            }
-            
-            animate();
-        })();
-
-        // TikTok WebView optimization: Show form fallback if anchor fails
-        function setupTikTokWebViewOptimization() {
-            const ctaButton = document.querySelector('.claim-button');
-            const ctaForm = document.querySelector('.cta-form');
-            const timestampInput = document.getElementById('timestamp');
-            
-            // Set timestamp for form
-            if (timestampInput) {
-                timestampInput.value = Date.now();
-            }
-            
-            // If anchor link fails to work, show form fallback
-            let anchorClicked = false;
-            
-            ctaButton.addEventListener('click', function(e) {
-                anchorClicked = true;
-                // If we're still here after a short delay, anchor probably failed
-                setTimeout(() => {
-                    if (anchorClicked) {
-                        ctaButton.style.display = 'none';
-                        ctaForm.style.display = 'block';
-                    }
-                }, 1000);
-            });
-            
-            // Reset if user navigates back
-            window.addEventListener('pageshow', function() {
-                anchorClicked = false;
-                ctaButton.style.display = 'block';
-                ctaForm.style.display = 'none';
-            });
-        }
-
-        // Initialize TikTok WebView optimization
-        setupTikTokWebViewOptimization();
-    </script>
 </body>
 </html>
