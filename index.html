@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- TikTok Pixel Code Start -->
+<script>
+!function (w, d, t) {
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+
+
+  ttq.load('D4C920RC77UA35RSVD20');
+  ttq.page();
+}(window, document, 'ttq');
+</script>
+<!-- TikTok Pixel Code End -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Make $300/day</title>
@@ -197,7 +210,25 @@
 
     <a href="https://uplevelrewarrds.com/aff_c?offer_id=2593&aff_id=2609" class="claim-button">Start Now →</a>
   </div>
+<script>
+// Fire TikTok pixel event on CTA click
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.querySelector(".claim-button");
 
+  if (btn) {
+    btn.addEventListener("click", function (e) {
+      ttq.track('Lead');
+      console.log("TikTok Lead event fired!");
+
+      const url = btn.getAttribute("href");
+      e.preventDefault();
+      setTimeout(() => {
+        window.location.href = url;
+      }, 250);
+    });
+  }
+});
+</script>
   <script>
     // Counter animation
     function animateValue(element, start, end, duration) {
@@ -225,3 +256,4 @@
   </script>
 </body>
 </html>
+
